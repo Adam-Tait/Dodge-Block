@@ -5,4 +5,9 @@ A pop-up will appear, click the button "More Info".
 Click "Install anyway"
 Run through intaller.
 
+Controls:
+A D or LeftArrow RightArrow to move left and right
+Space to use Power Up
+Esc to pause
+
 No harm will be done from installing this game.
