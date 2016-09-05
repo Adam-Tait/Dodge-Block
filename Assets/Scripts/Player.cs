@@ -53,11 +53,11 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D coll)
     {
-        FindObjectOfType<GameManager>().EndGame();
-        FindObjectOfType<GameManager>().SaveScore();
+        FindObjectOfType<GameManager>().SaveScore(Time.timeSinceLevelLoad, PlayerPrefs.GetFloat("HighScore"));
         float x = (rb.transform.position.x + coll.transform.position.x)/2f;
         particlePos = new Vector2(x, rb.transform.position.y);
         Instantiate(particleShower, particlePos, Quaternion.identity);
+        FindObjectOfType<GameManager>().EndGame();
     }
 
     IEnumerator PowerUp()

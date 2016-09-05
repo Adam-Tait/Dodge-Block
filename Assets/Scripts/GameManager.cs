@@ -7,18 +7,15 @@ public class GameManager : MonoBehaviour
 
     public float slowness = 10f;
 
-    private float highscore;
     public GameObject panel;
     public GameObject pause;
-
-    public void SaveScore()
-    {
-        highscore = PlayerPrefs.GetFloat("HighScore");
-        if (Time.timeSinceLevelLoad > highscore)
+    
+    public void SaveScore(float currentscore, float highscore)
+    {   
+        if (currentscore >= highscore)
         {
-            highscore = Time.timeSinceLevelLoad;
+            PlayerPrefs.SetFloat("HighScore", currentscore);
         }
-        PlayerPrefs.SetFloat("HighScore", highscore);
     }
 
     public void PauseGame()
