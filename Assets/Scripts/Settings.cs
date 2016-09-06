@@ -36,8 +36,16 @@ public class Settings : MonoBehaviour {
         }
         else
         {
-            Screen.SetResolution(Screen.resolutions[Screen.resolutions.Length - 1].width, Screen.resolutions[Screen.resolutions.Length - 1].height, true, refreshRate);
-            fullscreenToggle.isOn = true;
+            for (int i = 1; i < Screen.resolutions.Length; i++)
+            {
+                if (Screen.resolutions[Screen.resolutions.Length - i].width % 16 == 0)
+                {
+                    Screen.SetResolution(Screen.resolutions[Screen.resolutions.Length - i].width, Screen.resolutions[Screen.resolutions.Length - i].height, true, refreshRate);
+                    fullscreenToggle.isOn = true;
+                }
+                break;
+            }
+            
         }
     }
 
