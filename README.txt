@@ -3,7 +3,7 @@ Steps to install:
 Once downloaded run the installer.
 A pop-up will appear, click the button "More Info".
 Click "Install anyway"
-Run through intaller.
+Run through installer.
 
 Controls:
 A D or LeftArrow RightArrow to move left and right
